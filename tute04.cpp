@@ -1,15 +1,4 @@
-/*Exercise 4 - Functions
 
-Write a program to calculate the function called nCr which is defined as
-
-nCr = n!/ r!(n−r)!
-Where n! is the factorial of n.
-
-Implement the functions
-
-long Factorial(int no);
-long nCr(int n, int r);
-Do not modify the main function.*/
 
 #include <iostream>
 
@@ -26,4 +15,18 @@ int main() {
   std::cout << nCr(n,r);
   std::cout << std::endl;
   return 0;
+}
+long Factorial(int no)
+{ 
+int Factorial = 1;
+int i;
+for (int i=no; i>=1; i--)
+  {
+    Factorial= Factorial * i;
+  }
+return Factorial;
+  }
+ long nCr(int n, int i)
+{
+  return (Factorial (n)/ (Factorial (i)*Factorial(n-i)));
 }
